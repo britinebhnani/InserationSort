@@ -1,0 +1,32 @@
+class Main {
+  
+  static int[] nums={6,7,4,8,2};
+  
+  public static void main(String[] args) {
+    System.out.println("original array is: ");
+    printArray();
+  for(int a=1; a<nums.length; a++) {
+    int temp= nums[a];
+    int b= a-1;
+    while(b>=0 && nums[b]>temp) {
+      nums[b+1]= nums[b];
+      b--;
+    }
+    nums[b+1]=temp;
+    }
+    //System.out.println("swapping the " + nums[a] + " with " + nums[smallest]);
+    //int temp=nums[a];
+    //nums[a]= nums[smallest];
+    //nums[smallest]=temp;
+    printArray();
+  }
+
+public static void printArray(){
+    for(int y=0; y<nums.length; y++){
+      System.out.print(nums[y] + ",");
+
+    }
+    System.out.println("");
+    System.out.println("_________________________");
+  }
+}
